@@ -1,6 +1,6 @@
 # IP to Hosting
 
-This package allows you to check whether an IP address belongs to a hosting provider. In case the IP address can be successfully linked to a hosting provider (datacenter), this module will return the meta information for the hosting provider.
+This package allows you to check whether an IP address belongs to a hosting provider or not. In case the IP address can be successfully linked to a hosting provider (datacenter), this module will return the meta information for the hosting provider.
 
 If the IP address does not belong to a hosting provider, the response will be `null`.
 

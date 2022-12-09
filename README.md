@@ -21,7 +21,7 @@ git clone git@github.com:ipapi-is/ip_to_hosting.git
 Lookup the IP address `144.168.164.55`:
 
 ```JavaScript
-const { ipToHosting } = require('./src/ip_to_hosting');
+const { ipToHosting } = require('ip-to-hosting');
 
 (async () => {
   console.log(await ipToHosting('144.168.164.55'));
@@ -51,7 +51,7 @@ Most IP's don't belong to a hosting provider. In those cases, the response will 
 ### Lookup a DigitalOcean IP address `167.99.241.66`
 
 ```JavaScript
-const { ipToHosting } = require('./src/ip_to_hosting');
+const { ipToHosting } = require('ip-to-hosting');
 
 (async () => {
   console.log(await ipToHosting('167.99.241.66'));
@@ -72,7 +72,7 @@ const { ipToHosting } = require('./src/ip_to_hosting');
 ### Lookup a Linode IP address `97.107.129.77`
 
 ```JavaScript
-const { ipToHosting } = require('./src/ip_to_hosting');
+const { ipToHosting } = require('ip-to-hosting');
 
 (async () => {
   console.log(await ipToHosting('97.107.129.77'));
@@ -91,7 +91,7 @@ const { ipToHosting } = require('./src/ip_to_hosting');
 ### Lookup a Hetzner IP address `85.10.199.76`
 
 ```JavaScript
-const { ipToHosting } = require('./src/ip_to_hosting');
+const { ipToHosting } = require('ip-to-hosting');
 
 (async () => {
   console.log(await ipToHosting('85.10.199.76'));

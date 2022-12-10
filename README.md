@@ -1,6 +1,6 @@
 # IP to Hosting
 
-This package allows you to check whether an IP address belongs to a hosting provider or not. In case the IP belongs to a hosting provider (datacenter), this module will return the meta information for the hosting provider. If the IP address does not belong to a hosting provider, the response will be `null`.
+This package allows you to check whether an IP address belongs to a hosting/cloud provider. In case the IP belongs to a hosting provider (datacenter), this module will return the meta information for the hosting provider.
 
 ## Installation
 
@@ -113,6 +113,12 @@ you can find the minified JavaScript here: `node_modules/ip-to-hosting/dist/ipTo
 
 </html>
 ```
+
+## Use the Database Directly
+
+This package uses the [ipapi.is API](https://ipapi.is/developers.html) in order to avoid shipping a huge database in the npm module. If you have a large volume of IP addresses to lookup, you can download the full & free [Hosting Provider Database](https://ipapi.is/hosting-detection.html).
+
+GitHub mirror of the database: [Hosting Provider Database Mirror](https://github.com/ipapi-is/ipapi/tree/main/databases)
 
 ## More Examples
 

@@ -1,6 +1,6 @@
 {
   "name": "ip-to-hosting",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package allows you to check whether an IP address belongs to a hosting provider or not. In case the IP address can be successfully linked to a hosting provider (datacenter), this module will return the meta information for the hosting provider.",
   "main": "src/ip_to_hosting.js",
   "scripts": {
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/ipapi-is/ip_to_hosting/issues"
   },
-  "homepage": "https://github.com/ipapi-is/ip_to_hosting#readme"
+  "homepage": "https://ipapi.is/hosting-detection.html"
 }

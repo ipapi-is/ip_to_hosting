@@ -104,7 +104,8 @@ you can find the minified JavaScript here: `node_modules/ip-to-hosting/dist/ipTo
 </head>
 
 <body>
-  <script type="text/javascript" src="node_modules/ip-to-hosting/dist/ipToHosting.min.js">
+  <script type="text/javascript" src="dist/ipToHosting.min.js"></script>
+  <script type="text/javascript">
     ipToHosting('43.33.44.11').then((res) => {
       alert(`ipToHosting: ${JSON.stringify(res)}`);
     });

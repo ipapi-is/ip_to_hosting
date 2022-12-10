@@ -1,6 +1,6 @@
 {
   "name": "ip-to-hosting",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This package allows you to check whether an IP address belongs to a hosting provider or not. In case the IP address can be successfully linked to a hosting provider (datacenter), this module will return the meta information for the hosting provider.",
   "main": "src/ip_to_hosting.js",
   "scripts": {

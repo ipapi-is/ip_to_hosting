@@ -2,6 +2,8 @@
 
 This package allows you to check whether an IP address belongs to a hosting/cloud provider. In case the IP belongs to a hosting provider (datacenter), this module will return the meta information for the hosting provider.
 
+Currently, there are more than 180,000 IP ranges from more than 4,400 hosting providers in the database. Learn more, by [reading the documentation](https://ipapi.is/hosting-detection.html).
+
 ## Installation
 
 You can both use this package from Node.js and in the browser with vanilla JavaScript.
@@ -40,28 +42,12 @@ for (let ip of ipAddresses) {
 
 which yields:
 
-```text
+```JavaScript
 144.168.164.55 isHosting:
 {
   datacenter: 'B2 Net Solutions Inc.',
   domain: 'www.servermania.com',
   network: '144.168.128.0 - 144.168.255.255'
-}
-97.107.129.77 isHosting:
-{
-  cidr: '97.107.129.0/24',
-  datacenter: 'US-NJ',
-  city: 'Cedar Knolls',
-  country: 'US'
-}
-167.99.241.66 isHosting:
-{
-  cidr: '167.99.240.0/20',
-  datacenter: 'DigitalOcean',
-  code: '60341',
-  city: 'Frankfurt',
-  state: 'DE-HE',
-  country: 'DE'
 }
 85.10.199.76 isHosting:
 {
@@ -69,11 +55,28 @@ which yields:
   domain: 'www.hetzner.com',
   network: '85.10.192.0 - 85.10.207.255'
 }
+97.107.129.77 isHosting:
+{
+  datacenter: 'Linode',
+  name: 'US-NJ',
+  city: 'Cedar Knolls',
+  country: 'US',
+  network: '97.107.129.0/24'
+}
+167.99.241.66 isHosting:
+{
+  datacenter: 'DigitalOcean',
+  code: '60341',
+  city: 'Frankfurt',
+  state: 'DE-HE',
+  country: 'DE',
+  network: '167.99.240.0/20'
+}
 ```
 
 If the IP address belongs to a datacenter/hosting provider, the API response will return an object with the following required attributes:
 
-- `datacenter` - `string` - to which datacenter the IP address belongs. For a full list of datacenters, check the [ipapi.is/json/info endpoint](https://ipapi.is/json/info). In this case, the datacenter's name is `B2 Net Solutions Inc.`.
+- `datacenter` - `string` - to which datacenter the IP address belongs. For a full list of datacenters, check the [ipapi.is/json/info endpoint](https://ipapi.is/json/info). In this case, the datacenter's name is `B2 Net Solutions Inc.`
 - `domain` - `string` - The domain name of the company
 - `network` - `string` - the network this IP address belongs to (In the above case: `144.168.128.0 - 144.168.255.255`)
 

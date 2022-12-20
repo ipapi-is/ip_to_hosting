@@ -1,5 +1,8 @@
 # IP to Hosting
 
+[![Npm package version](https://badgen.net/npm/v/ip-to-hosting)](https://www.npmjs.com/package/ip-to-hosting)
+[![Npm package yearly downloads](https://badgen.net/npm/dy/ip-to-hosting)](https://npmjs.com/package/ip-to-hosting)
+
 This package allows you to check whether an IP address belongs to a hosting/cloud provider. In case the IP belongs to a hosting provider (datacenter), this module will return the meta information for the hosting provider.
 
 Currently, there are more than 180,000 IP ranges from more than 4,400 hosting providers in the database. Learn more, by [reading the documentation](https://ipapi.is/hosting-detection.html).

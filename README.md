@@ -23,7 +23,7 @@ git clone git@github.com:ipapi-is/ip_to_hosting.git
 
 ## Usage from Node.js
 
-If you want to lookup the IP address `144.168.164.55`:
+If you want to lookup the following IP addresses:
 
 ```JavaScript
 const { ipToHosting } = require('ip-to-hosting');
@@ -46,25 +46,11 @@ for (let ip of ipAddresses) {
 which yields:
 
 ```JavaScript
-144.168.164.55 isHosting:
-{
-  datacenter: 'B2 Net Solutions Inc.',
-  domain: 'www.servermania.com',
-  network: '144.168.128.0 - 144.168.255.255'
-}
 85.10.199.76 isHosting:
 {
-  datacenter: 'Hetzner Online AG',
+  datacenter: 'Hetzner Online GmbH',
   domain: 'www.hetzner.com',
   network: '85.10.192.0 - 85.10.207.255'
-}
-97.107.129.77 isHosting:
-{
-  datacenter: 'Linode',
-  name: 'US-NJ',
-  city: 'Cedar Knolls',
-  country: 'US',
-  network: '97.107.129.0/24'
 }
 167.99.241.66 isHosting:
 {
@@ -74,6 +60,18 @@ which yields:
   state: 'DE-HE',
   country: 'DE',
   network: '167.99.240.0/20'
+}
+144.168.164.55 isHosting:
+{
+  datacenter: 'ServerMania Inc.',
+  domain: 'https://www.servermania.com/',
+  network: '144.168.128.0-144.168.255.255'
+}
+97.107.129.77 isHosting:
+{
+  datacenter: 'Linode',
+  domain: 'https://www.linode.com/',
+  network: '97.107.128.0-97.107.143.255'
 }
 ```
 
@@ -110,10 +108,11 @@ you can find the minified JavaScript here: `node_modules/ip-to-hosting/dist/ipTo
 </head>
 
 <body>
+  <pre id="hosting"></pre>
   <script type="text/javascript" src="dist/ipToHosting.min.js"></script>
   <script type="text/javascript">
     ipToHosting('43.33.44.11').then((res) => {
-      alert(`ipToHosting: ${JSON.stringify(res)}`);
+      document.getElementById('hosting').innerText = JSON.stringify(res, null, 2);
     });
   </script>
 </body>
@@ -126,63 +125,3 @@ you can find the minified JavaScript here: `node_modules/ip-to-hosting/dist/ipTo
 This package uses the [ipapi.is API](https://ipapi.is/developers.html) in order to avoid shipping a huge database in the npm module. If you have a large volume of IP addresses to lookup, you can download the full & free [Hosting Provider Database](https://ipapi.is/hosting-detection.html).
 
 GitHub mirror of the database: [Hosting Provider Database Mirror](https://github.com/ipapi-is/ipapi/tree/main/databases)
-
-## More Examples
-
-Lookup a DigitalOcean IP address `167.99.241.66`
-
-```JavaScript
-const { ipToHosting } = require('ip-to-hosting');
-
-(async () => {
-  console.log(await ipToHosting('167.99.241.66'));
-})();
-```
-
-```JavaScript
-{
-  cidr: '167.99.240.0/20',
-  datacenter: 'DigitalOcean',
-  code: '60341',
-  city: 'Frankfurt',
-  state: 'DE-HE',
-  country: 'DE'
-}
-```
-
-Lookup a Linode IP address `97.107.129.77`
-
-```JavaScript
-const { ipToHosting } = require('ip-to-hosting');
-
-(async () => {
-  console.log(await ipToHosting('97.107.129.77'));
-})();
-```
-
-```JavaScript
-{
-  cidr: '97.107.129.0/24',
-  datacenter: 'US-NJ',
-  city: 'Cedar Knolls',
-  country: 'US'
-}
-```
-
-Lookup a Hetzner IP address `85.10.199.76`
-
-```JavaScript
-const { ipToHosting } = require('ip-to-hosting');
-
-(async () => {
-  console.log(await ipToHosting('85.10.199.76'));
-})();
-```
-
-```JavaScript
-{
-  datacenter: 'Hetzner Online AG',
-  domain: 'www.hetzner.com',
-  network: '85.10.192.0 - 85.10.207.255'
-}
-```

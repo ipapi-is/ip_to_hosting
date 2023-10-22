@@ -1,6 +1,6 @@
 function ipToHosting(ip) {
   return new Promise(function (resolve) {
-    fetch(`https://ipapi.is/json/?q=${ip}`)
+    fetch(`https://api.ipapi.is/?q=${ip}`)
       .then(res => res.json())
       .then(function (parsed) {
         try {

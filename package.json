@@ -1,35 +1,39 @@
 {
   "name": "ip-to-hosting",
-  "version": "1.0.7",
-  "description": "This package allows you to check whether an IP address belongs to a hosting provider or not. In case the IP address can be successfully linked to a hosting provider (datacenter), this module will return the meta information for the hosting provider.",
-  "main": "src/ip_to_hosting.js",
+  "version": "2.0.0",
+  "description": "Is this IP address a datacenter? Tells whether an IP belongs to a hosting, cloud or CDN provider (AWS, Azure, Google Cloud, Hetzner, OVH and thousands more) and names it, from ipapi.is",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test"
   },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "hosting detection",
+    "datacenter detection",
+    "datacenter ip",
+    "cloud provider detection",
+    "bot detection",
+    "ip lookup",
+    "aws",
+    "azure",
+    "google cloud",
+    "hetzner",
+    "ovh",
+    "ipapi.is"
+  ],
+  "homepage": "https://ipapi.is/hosting-detection.html?ref=npm",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ipapi-is/ip_to_hosting.git"
   },
-  "keywords": [
-    "hosting-detection",
-    "datacenter-detection",
-    "cloud-provider-detection",
-    "IP",
-    "cloud",
-    "datacenter",
-    "API",
-    "lookup",
-    "AWS",
-    "Google-Cloud",
-    "Hetzner",
-    "OVH",
-    "Azure",
-    "Linode"
-  ],
-  "author": "ipapi.is",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ipapi-is/ip_to_hosting/issues"
   },
-  "homepage": "https://ipapi.is/hosting-detection.html"
+  "author": "ipapi.is <info@ipapi.is> (https://ipapi.is/)",
+  "license": "ISC"
 }
